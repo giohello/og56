@@ -10,7 +10,7 @@ inquirer
   },
 ])
 .then((answers) => {
-  const url = answers.URL;
+  let url = answers.URL;
   var qr_svg = qr.image(url);
   qr_svg.pipe(fs.createWriteStream("qr_img.png"));
 
